@@ -10,11 +10,11 @@ machines.
 This library and tool provides a consistent way of implementing changes to
 configuration.
 
-1) The CLI tool can be run on the configuration files to validate that they are syntactically correct.
-2) The user can then use a "git commit" and a "git push origin master" to transfer the changed files to the server.
-3) A git hook can run the CLI tool with different options to load the configuration files that have changed into Redis.
-4) A Redis push message can take place or clients can pole a single 256-bit hash to find if anything has changed.
-5) Clients can then receive changes.
+1. The CLI tool can be run on the configuration files to validate that they are syntactically correct.
+2. The user can then use a "git commit" and a "git push origin master" to transfer the changed files to the server.
+3. A git hook can run the CLI tool with different options to load the configuration files that have changed into Redis.
+4. A Redis push message can take place or clients can pole a single 256-bit hash to find if anything has changed.
+5. Clients can then receive changes.
 
 
 
