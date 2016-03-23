@@ -191,6 +191,9 @@ func (pnc *PerNameCacheType) UpdateName(name string) {
 func (pnc *PerNameCacheType) CreateSandbox(name, sb string) {
 }
 
+func (pnc *PerNameCacheType) LoadName(name string) {
+}
+
 // Sample Call:  pnc.GetConfigFor ( "working_test_for_aes_srp", "", ":bits" )
 func (pnc *PerNameCacheType) GetConfigFor(name string, sb, item string) (it interface{}) {
 	// if have it in pnc, by server name

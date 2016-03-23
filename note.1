@@ -1,0 +1,49 @@
+
+cli --load=Name
+cli -l Name
+	Load / Update the named item
+	If Name already exists in Redis
+		Each resource will be checked (Update Timestamp |Hash) for changes - if found then load it.
+		Any new resources will be added
+	Else
+		It will be added
+	If modified then a "hash" will be generated for the top level that indicates this
+
+cli --del=Name
+cli -d Name
+	A "delete" will be perormed on this named resource, delete from Redis also
+	The "hash" for this resource will mark it as "deleted"/updated
+
+cli --load=Name --sandbox=SBName
+cli -l Name -S SBName
+	1. Perform --load as above
+	2. Create a sandboxed version with SBName as a copy of resource
+
+cli --watch Name &
+cli -w Name &
+	Watch the Named files for changes - if changed then perform a --load operation
+
+
+cli --print Name 
+cli -p Name 
+cli --dump Name 
+cli -d Name 
+	Print out the complete config for this name (--print), or dump in JSON format
+	the resources to files.
+
+cli --get=Name,Item
+cli -g Name,Item
+cli --get=Name,SbName,Item
+cli -g Name,SbName,Item
+	Get the specified name/item	
+
+cli --desc
+cli -D
+	Show what would be updated if --load were to be run
+
+cli --check=Name
+cli -c Name
+	Perform checks on syntax without an actual load
+
+
+
