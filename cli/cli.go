@@ -57,6 +57,9 @@ cli --check=Name
 cli -c Name
 	Perform checks on syntax without an actual load
 
+Options
+	--H or --hashOrTs = (ts|hash)
+
 */
 var opts struct {
 	GlobalCfgFN string `short:"G" long:"globaCfgFile"  description:"Full path to global config" default:"global-config.json"`
@@ -69,6 +72,7 @@ var opts struct {
 	Get         string `short:"g" long:"get"           description:"Get the named item" default:""`
 	Activity    string `short:"a" long:"activity"      description:"Show what would be update across named item(s)" default:""`
 	Check       string `short:"c" long:"check"         description:"Check named item for syntax correctness" default:""`
+	HashOrTs    string `short:"H" long:"hashOrTs"      description:"Check for modification using Hash or TimeStamp" default:"ts"`
 }
 
 func main() {
@@ -133,6 +137,9 @@ func main() {
 
 }
 
+// xyzzy - global config struct and vars
+
 // read Redis config and other global config for this program - create global data for that.
 func ReadGlobalConfigFile(GlobalCfgFN string) {
+	// xyzzy - global config read it
 }
