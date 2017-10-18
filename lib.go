@@ -11,7 +11,7 @@ import (
 // ----------------------------------------------------------------------------------------------------------------------------
 
 //import (
-//	"github.com/pschlump/gosrp" // Path: /Users/corwin/go/src/www.2c-why.com/gosrp
+//	"github.com/pschlump/gosrp"
 //)
 
 func Sha256(s string) (rv string) {
